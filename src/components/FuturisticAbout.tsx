@@ -15,7 +15,7 @@ const FuturisticAbout = () => {
   const skills = [
     { icon: Code, name: 'Frontend Development', level: '95%' },
     { icon: Palette, name: 'UI/UX Design', level: '90%' },
-    { icon: Rocket, name: 'Animation & Motion', level: '85%' },
+    { icon: Rocket, name: 'Flutter Developer', level: '92%' },
     { icon: Lightning, name: 'Performance Optimization', level: '88%' }
   ];
 
