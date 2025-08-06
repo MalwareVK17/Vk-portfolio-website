@@ -107,7 +107,7 @@ const FuturisticContact = () => {
   const contactInfo = [{
     icon: Envelope,
     label: 'Email',
-    value: 'vinay@example.com'
+    value: 'vinaykumarmvk17@gmail.com'
   }, {
     icon: Phone,
     label: 'Phone',
