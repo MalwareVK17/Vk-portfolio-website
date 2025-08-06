@@ -90,7 +90,7 @@ const FuturisticContact = () => {
   const socialLinks = [{
     icon: GithubLogo,
     name: 'GitHub',
-    url: '#'
+    url: 'https://github.com/MalwareVK17'
   }, {
     icon: LinkedinLogo,
     name: 'LinkedIn',
