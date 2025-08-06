@@ -72,9 +72,6 @@ const FuturisticNavigation = () => {
                   {item.label}
                 </button>
               ))}
-              <button className="glow-button px-6 py-2 rounded-full text-sm font-medium">
-                Hire Me
-              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -113,9 +110,6 @@ const FuturisticNavigation = () => {
                 {item.label}
               </button>
             ))}
-            <button className="glow-button px-8 py-4 rounded-full text-lg font-medium mt-8 self-start">
-              Hire Me
-            </button>
           </div>
         </div>
       </div>
