@@ -142,9 +142,9 @@ const FuturisticAbout = () => {
                 About Me
               </h2>
               <p className="text-lg text-muted-foreground mb-6 font-light leading-relaxed">
-                I'm a passionate full-stack developer and designer with 5+ years of experience 
-                creating immersive digital experiences. I specialize in modern web technologies, 
-                3D graphics, and motion design.
+                I'm a passionate Mobile app developer and UI/UX designer 
+                creating immersive digital experiences. I specialize in modern mobile technologies, 
+                intuitive user interfaces, and engaging user experiences.
               </p>
               <p className="text-lg text-muted-foreground font-light leading-relaxed">
                 My approach combines technical expertise with creative vision to deliver 
@@ -181,7 +181,7 @@ const FuturisticAbout = () => {
                 <div className="text-sm text-muted-foreground font-light">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">2+</div>
                 <div className="text-sm text-muted-foreground font-light">Years Experience</div>
               </div>
               <div className="text-center">
