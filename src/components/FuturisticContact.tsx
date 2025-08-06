@@ -115,7 +115,7 @@ const FuturisticContact = () => {
   }, {
     icon: MapPin,
     label: 'Location',
-    value: 'Bangalore, India'
+    value: 'Andhra Pradesh, India'
   }];
   return <section ref={sectionRef} id="contact" className="py-32 relative overflow-hidden">
       {/* Background Elements */}
