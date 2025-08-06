@@ -111,7 +111,7 @@ const FuturisticContact = () => {
   }, {
     icon: Phone,
     label: 'Phone',
-    value: '+91 98765 43210'
+    value: '+91 7569356522'
   }, {
     icon: MapPin,
     label: 'Location',
