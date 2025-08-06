@@ -185,12 +185,6 @@ const FuturisticProjects = () => {
           ))}
         </div>
 
-        {/* View More Button */}
-        <div className="text-center mt-16">
-          <button className="glow-button px-8 py-4 rounded-full text-lg font-medium">
-            View All Projects
-          </button>
-        </div>
       </div>
     </section>
   );
