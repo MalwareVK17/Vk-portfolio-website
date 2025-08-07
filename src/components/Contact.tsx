@@ -46,13 +46,13 @@ const Contact = () => {
                     <label className="font-body text-sm font-medium text-foreground mb-2 block">
                       First Name
                     </label>
-                    <Input placeholder="John" className="font-body" />
+                    <Input placeholder="Vinay" className="font-body" />
                   </div>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground mb-2 block">
                       Last Name
                     </label>
-                    <Input placeholder="Doe" className="font-body" />
+                    <Input placeholder="Kumar" className="font-body" />
                   </div>
                 </div>
                 
@@ -60,14 +60,14 @@ const Contact = () => {
                   <label className="font-body text-sm font-medium text-foreground mb-2 block">
                     Email
                   </label>
-                  <Input type="email" placeholder="john@example.com" className="font-body" />
+                  <Input type="email" placeholder="vinaykumarmvk17@gmail.com" className="font-body" />
                 </div>
                 
                 <div>
                   <label className="font-body text-sm font-medium text-foreground mb-2 block">
                     Project Type
                   </label>
-                  <Input placeholder="Brand Identity, Web Design, etc." className="font-body" />
+                  <Input placeholder="Brand Identity, Developer & Designer, etc." className="font-body" />
                 </div>
                 
                 <div>
@@ -108,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-body font-medium text-foreground">Email</h4>
-                  <p className="font-body text-muted-foreground">alex@example.com</p>
+                  <p className="font-body text-muted-foreground">vinaykumarmvk17@gmail.com</p>
                 </div>
               </div>
               
@@ -120,7 +120,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-body font-medium text-foreground">Phone</h4>
-                  <p className="font-body text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="font-body text-muted-foreground">+91 7569356522</p>
                 </div>
               </div>
               
@@ -133,7 +133,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-body font-medium text-foreground">Location</h4>
-                  <p className="font-body text-muted-foreground">New York, NY</p>
+                  <p className="font-body text-muted-foreground">Andhra Pradesh, India</p>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Contact = () => {
             <div className="pt-8">
               <h4 className="font-body font-medium text-foreground mb-4">Follow Me</h4>
               <div className="flex space-x-4">
-                {['Dribbble', 'Behance', 'LinkedIn', 'Instagram'].map((social, index) => (
+                {['Telegram', 'twitter', 'LinkedIn', 'Instagram'].map((social, index) => (
                   <div 
                     key={index} 
                     className="w-12 h-12 bg-secondary hover:bg-gradient-accent rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:text-white group"
