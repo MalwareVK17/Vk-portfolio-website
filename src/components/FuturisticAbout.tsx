@@ -15,8 +15,8 @@ const FuturisticAbout = () => {
   const skills = [
     { icon: Code, name: 'Frontend Development', level: '95%' },
     { icon: Palette, name: 'UI/UX Design', level: '90%' },
-    { icon: Rocket, name: 'Flutter Developer', level: '92%' },
-    { icon: Lightning, name: 'Performance Optimization', level: '88%' }
+    { icon: Rocket, name: 'Mobile App Development', level: '92%' },
+    { icon: Lightning, name: 'Java Development', level: '88%' }
   ];
 
   useEffect(() => {
@@ -177,7 +177,7 @@ const FuturisticAbout = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">50+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5+</div>
                 <div className="text-sm text-muted-foreground font-light">Projects</div>
               </div>
               <div className="text-center">
@@ -185,7 +185,7 @@ const FuturisticAbout = () => {
                 <div className="text-sm text-muted-foreground font-light">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">30+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5+</div>
                 <div className="text-sm text-muted-foreground font-light">Happy Clients</div>
               </div>
             </div>
