@@ -97,7 +97,7 @@ const FuturisticFooter = () => {
               <span className="font-light">by Vinay Kumar</span>
             </div>
             <div className="text-sm text-muted-foreground/60 mt-2 font-light">
-              © 2024 All rights reserved
+              © 2025 All rights reserved
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ const FuturisticFooter = () => {
         {/* Bottom Line */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <div className="text-sm text-muted-foreground/60 font-light">
-            Designed & Developed with cutting-edge technologies
+            Designed & Developed with Animation technologies
           </div>
         </div>
       </div>
