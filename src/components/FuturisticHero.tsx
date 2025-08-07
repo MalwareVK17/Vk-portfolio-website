@@ -104,7 +104,7 @@ const FuturisticHero = () => {
             ref={subtitleRef}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto font-light leading-relaxed"
           >
-            Crafting immersive digital experiences with cutting-edge technology and creative innovation
+            Crafting immersive digital experiences with Animation technology and creative innovation
           </p>
 
           <button 
