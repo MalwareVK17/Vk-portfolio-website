@@ -30,23 +30,25 @@ const About = () => {
               About Me
             </h2>
             <p className="font-body text-lg text-foreground/80 mb-6 leading-relaxed">
-              I'm a passionate creative designer with over 8 years of experience in crafting 
-              digital experiences that tell compelling stories. My expertise spans from brand 
-              identity design to interactive web experiences.
+              I’m a versatile Mobile App Developer, UI/UX Designer, and Backend Web Developer, passionate about building complete digital solutions — from clean,
+              user-friendly interfaces to robust backend systems.With a strong foundation in app development and backend technologies, 
+              I help businesses and startups turn ideas into functional, modern, and scalable applications. As a freelancer, I provide end-to-end services: from designing the user experience, 
+              to developing the app or website, and deploying the backend infrastructure.
             </p>
             <p className="font-body text-lg text-foreground/80 mb-8 leading-relaxed">
               I believe great design is not just about making things look beautiful—it's about 
               solving problems, creating connections, and driving meaningful impact for businesses 
-              and their audiences.
+              and their audiences.To deliver high-quality digital products that not only work great but also look and feel amazing. 
+              I aim to help clients succeed by providing reliable, efficient, and creative tech solutions — all under one roof.
             </p>
             
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="font-display text-2xl font-semibold text-primary mb-3">150+</h3>
+                <h3 className="font-display text-2xl font-semibold text-primary mb-3">5+</h3>
                 <p className="font-body text-muted-foreground">Projects Completed</p>
               </div>
               <div>
-                <h3 className="font-display text-2xl font-semibold text-primary mb-3">50+</h3>
+                <h3 className="font-display text-2xl font-semibold text-primary mb-3">5+</h3>
                 <p className="font-body text-muted-foreground">Happy Clients</p>
               </div>
             </div>
