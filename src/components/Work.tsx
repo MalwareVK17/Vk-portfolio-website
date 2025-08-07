@@ -24,21 +24,21 @@ const Work = () => {
 
   const projects = [
     {
-      title: "E-commerce Platform Redesign",
-      category: "UI/UX Design",
-      description: "Complete redesign of a major e-commerce platform resulting in 40% increase in conversions.",
+      title: "University Portfolio App",
+      category: "Flutter development",
+      description: "University Portfolio App is a flutter app that helps students to manage their portfolio.",
       color: "bg-gradient-to-br from-blue-500 to-purple-600"
     },
     {
-      title: "Brand Identity System",
-      category: "Branding",
-      description: "Comprehensive brand identity for a tech startup including logo, guidelines, and marketing materials.",
+      title: "Music Player App",
+      category: "Flutter development",
+      description: "Music Player App is a flutter app that helps users to manage their music.",
       color: "bg-gradient-to-br from-green-500 to-teal-600"
     },
     {
-      title: "Mobile App Interface",
-      category: "Mobile Design",
-      description: "Intuitive mobile app design for a fitness platform with seamless user experience.",
+      title: "Backend Development",
+      category: "Product based Website",
+      description: "Backend Development is a node.js app that helps users to manage their backend.",
       color: "bg-gradient-to-br from-orange-500 to-red-600"
     },
     {
