@@ -96,8 +96,8 @@ const FuturisticContact = () => {
     name: 'LinkedIn',
     url: '#'
   }, {
-    icon: DribbbleLogo,
-    name: 'Dribbble',
+    icon: InstgramLogo,
+    name: 'Instgram',
     url: '#'
   }, {
     icon: TwitterLogo,
