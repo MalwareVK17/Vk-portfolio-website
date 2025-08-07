@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PaperPlaneTilt, Envelope, Phone, MapPin, GithubLogo, LinkedinLogo, InstagramLogo, TwitterLogo } from 'phosphor-react';
+
 gsap.registerPlugin(ScrollTrigger);
+
 const FuturisticContact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -12,6 +14,7 @@ const FuturisticContact = () => {
     email: '',
     message: ''
   });
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Form animation
@@ -67,14 +70,17 @@ const FuturisticContact = () => {
         });
       });
     });
+
     return () => ctx.revert();
   }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Animate submit button
@@ -87,6 +93,8 @@ const FuturisticContact = () => {
     });
     console.log('Form submitted:', formData);
   };
+
+  // Social links with proper URLs
   const socialLinks = [{
     icon: GithubLogo,
     name: 'GitHub',
@@ -94,38 +102,49 @@ const FuturisticContact = () => {
   }, {
     icon: LinkedinLogo,
     name: 'LinkedIn',
-    url: '#'
+    url: 'https://www.linkedin.com/in/vinay-kumar-mvk/' // Add your actual LinkedIn URL
   }, {
     icon: InstagramLogo,
     name: 'Instagram',
-    url: '#'
+    url: 'https://www.instagram.com/yourusername/' // Add your actual Instagram URL
   }, {
     icon: TwitterLogo,
     name: 'Twitter',
-    url: '#'
+    url: 'https://twitter.com/yourusername' // Add your actual Twitter URL
   }];
+
+  // Contact info with clickable actions
   const contactInfo = [{
     icon: Envelope,
     label: 'Email',
-    value: 'vinaykumarmvk17@gmail.com'
+    value: 'vinaykumarmvk17@gmail.com',
+    action: () => window.open('mailto:vinaykumarmvk17@gmail.com', '_blank')
   }, {
     icon: Phone,
     label: 'Phone',
-    value: '+91 7569356522'
+    value: '+91 7569356522',
+    action: () => window.open('tel:+917569356522', '_blank')
   }, {
     icon: MapPin,
     label: 'Location',
-    value: 'Andhra Pradesh, India'
+    value: 'Andhra Pradesh, India',
+    action: () => window.open('https://www.google.com/maps/place/Andhra+Pradesh,+India/', '_blank')
   }];
-  return <section ref={sectionRef} id="contact" className="py-32 relative overflow-hidden">
+
+  return (
+    <section ref={sectionRef} id="contact" className="py-32 relative overflow-hidden">
       {/* Background Elements */}
       <div className="floating-orb w-32 h-32 top-20 right-20 opacity-15"></div>
       <div className="floating-orb w-24 h-24 bottom-32 left-20 opacity-10"></div>
 
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-5xl mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent md:text-6xl font-bold">Let's Contact Me</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">Ready to bring your ideas to life? Let's create something....</p>
+          <h2 className="text-5xl mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent md:text-6xl font-bold">
+            Let's Contact Me
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+            Ready to bring your ideas to life? Let's create something....
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
@@ -136,24 +155,51 @@ const FuturisticContact = () => {
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Name
                 </label>
-                <input type="text" name="name" value={formData.name} onChange={handleInputChange} className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground" placeholder="Your name" required />
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                  placeholder="Your name"
+                  required
+                />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Email
                 </label>
-                <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground" placeholder="your@email.com" required />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                  placeholder="your@email.com"
+                  required
+                />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Message
                 </label>
-                <textarea name="message" value={formData.message} onChange={handleInputChange} rows={6} className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground resize-none" placeholder="Tell me about your project..." required />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={6}
+                  className="w-full px-4 py-3 bg-muted/50 border border-white/10 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground placeholder-muted-foreground resize-none"
+                  placeholder="Tell me about your project..."
+                  required
+                />
               </div>
 
-              <button type="submit" className="w-full glow-button px-8 py-4 rounded-xl text-lg font-medium flex items-center justify-center space-x-2">
+              <button
+                type="submit"
+                className="w-full glow-button px-8 py-4 rounded-xl text-lg font-medium flex items-center justify-center space-x-2"
+              >
                 <PaperPlaneTilt size={20} />
                 <span>Send Message</span>
               </button>
@@ -172,21 +218,27 @@ const FuturisticContact = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
+            {/* Contact Details - Now Clickable */}
             <div className="space-y-6">
-              {contactInfo.map((info, index) => <div key={index} className="flex items-center space-x-4 group">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+              {contactInfo.map((info, index) => (
+                <div
+                  key={index}
+                  className="flex items-center space-x-4 group cursor-pointer hover:bg-white/5 p-3 rounded-xl transition-all duration-300"
+                  onClick={info.action}
+                >
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                     <info.icon className="text-white" size={22} />
                   </div>
                   <div>
                     <div className="text-sm text-accent font-medium uppercase tracking-wider">
                       {info.label}
                     </div>
-                    <div className="text-lg text-foreground font-light">
+                    <div className="text-lg text-foreground font-light group-hover:text-primary transition-colors duration-300">
                       {info.value}
                     </div>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
 
             {/* Social Links */}
@@ -195,14 +247,28 @@ const FuturisticContact = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => <a key={index} href={social.url} className="w-12 h-12 glass-card flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300 group">
-                    <social.icon className="text-muted-foreground group-hover:text-primary transition-colors duration-300" size={20} />
-                  </a>)}
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 glass-card flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300 group hover:scale-110"
+                    title={`Visit my ${social.name}`}
+                  >
+                    <social.icon
+                      className="text-muted-foreground group-hover:text-primary transition-colors duration-300"
+                      size={20}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FuturisticContact;
