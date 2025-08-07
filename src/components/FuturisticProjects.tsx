@@ -11,29 +11,29 @@ const FuturisticProjects = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
 
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      category: "Full-Stack Development",
-      description: "Modern e-commerce solution with advanced animations, real-time inventory, and seamless user experience.",
-      tech: ["React", "Node.js", "GSAP", "Stripe"],
+   {
+      title: "Unversity Portfolio App",
+      category: "Mobile App",
+      description: "About the App The GGU Experience App (GGU Expo) is a cutting-edge, cross-platform mobile application meticulously crafted with Flutter and Dart. Designed to revolutionize the student journey at Godavari Global University, this app provides an intuitive and user-friendly platform, putting essential university resources and services right at students' fingertips. It's built to enhance daily campus life, streamline access to information, and foster a more connected university community.",
+      tech: ["Flutter", "Dart", "Firebase", "Android Studio"],
       icon: Globe,
       gradient: "from-blue-500 to-purple-600",
       glow: "shadow-blue-500/30"
     },
     {
-      title: "Mobile Banking App",
-      category: "UI/UX Design",
-      description: "Intuitive banking interface with biometric authentication and real-time transaction monitoring.",
-      tech: ["React Native", "TypeScript", "Figma"],
+      title: "Portfolio App",
+      category: "Mobile App & UI/UX Design",
+      description: "Portfolio App is a modern and responsive portfolio website built with Flutter and Dart. It features a clean and minimalist design, with smooth animations and transitions. The app is designed to be easy to navigate and provides a seamless user experience.",
+      tech: ["Flutter", "Dart", "Animated", "Android Studio"],
       icon: DeviceMobile,
       gradient: "from-emerald-500 to-teal-600",
       glow: "shadow-emerald-500/30"
     },
     {
-      title: "Brand Identity System",
-      category: "Brand Design",
-      description: "Complete visual identity for tech startup including logo, guidelines, and marketing materials.",
-      tech: ["Adobe CC", "Figma", "Principle"],
+      title: "Music Player App",
+      category: "UI/UX Design",
+      description: "Complete visual identity for music player app with new features and modern design.",
+      tech: ["Adobe XD", "Figma", "Principle"],
       icon: Palette,
       gradient: "from-pink-500 to-rose-600",
       glow: "shadow-pink-500/30"
@@ -48,19 +48,10 @@ const FuturisticProjects = () => {
       glow: "shadow-orange-500/30"
     },
     {
-      title: "NFT Marketplace",
-      category: "Web3 Development",
-      description: "Decentralized marketplace for digital assets with smart contract integration and wallet connectivity.",
-      tech: ["Solidity", "Web3.js", "IPFS", "MetaMask"],
-      icon: Sparkle,
-      gradient: "from-violet-500 to-purple-600",
-      glow: "shadow-violet-500/30"
-    },
-    {
-      title: "Real-time Chat App",
-      category: "Real-time Application",
-      description: "High-performance messaging platform with end-to-end encryption and video calling features.",
-      tech: ["Socket.io", "WebRTC", "MongoDB", "Redis"],
+      title: "Backend Development",
+      category: "Product based website",
+      description: "Implementation of backend development for a product based website.",
+      tech: ["Node.js", "javascript", "Supabase", "vercel"],
       icon: Lightning,
       gradient: "from-cyan-500 to-blue-600",
       glow: "shadow-cyan-500/30"
