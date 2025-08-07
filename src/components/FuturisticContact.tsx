@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { PaperPlaneTilt, Envelope, Phone, MapPin, GithubLogo, LinkedinLogo, DribbbleLogo, TwitterLogo } from 'phosphor-react';
+import { PaperPlaneTilt, Envelope, Phone, MapPin, GithubLogo, LinkedinLogo, InstagramLogo, TwitterLogo } from 'phosphor-react';
 gsap.registerPlugin(ScrollTrigger);
 const FuturisticContact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -96,8 +96,8 @@ const FuturisticContact = () => {
     name: 'LinkedIn',
     url: '#'
   }, {
-    icon: InstgramLogo,
-    name: 'Instgram',
+    icon: InstagramLogo,
+    name: 'Instagram',
     url: '#'
   }, {
     icon: TwitterLogo,
