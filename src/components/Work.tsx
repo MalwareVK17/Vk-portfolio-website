@@ -73,11 +73,10 @@ const Work = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className={`group cursor-pointer transition-all duration-700 hover:shadow-elegant hover:-translate-y-2 ${
+              className={`group transition-all duration-700 hover:shadow-elegant hover:-translate-y-2 ${
                 isVisible ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
-              onClick={() => handleProjectClick(project.githubUrl)}
             >
               <div className="p-0 overflow-hidden rounded-lg">
                 <div className={`h-64 ${project.color} relative overflow-hidden`}>
@@ -100,22 +99,23 @@ const Work = () => {
                   <h3 className="font-display text-2xl font-semibold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                  <p className="font-body text-muted-foreground leading-relaxed mb-6">
                     {project.description}
                   </p>
                   
                   {/* View Details Button */}
-                  <div className="flex items-center justify-between">
-                    <span className="font-body text-sm text-muted-foreground">
-                      Click to view repository
-                    </span>
-                    <div className="flex items-center text-accent group-hover:text-primary transition-colors duration-300">
-                      <span className="font-medium text-sm mr-2">View Details</span>
-                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
+                  <button 
+                    className="w-full bg-gradient-to-r from-primary to-accent text-white font-medium py-3 px-6 rounded-lg hover:from-accent hover:to-primary transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2 group/button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleProjectClick(project.githubUrl);
+                    }}
+                  >
+                    <span>View Details</span>
+                    <svg className="w-5 h-5 transform group-hover/button:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </Card>
