@@ -27,27 +27,35 @@ const Work = () => {
       title: "University Portfolio App",
       category: "Flutter development",
       description: "University Portfolio App is a flutter app that helps students to manage their portfolio.",
-      color: "bg-gradient-to-br from-blue-500 to-purple-600"
+      color: "bg-gradient-to-br from-blue-500 to-purple-600",
+      githubUrl: "https://github.com/MalwareVK17/university-portfolio-app" // Add your actual repo URL
     },
     {
       title: "Music Player App",
       category: "Flutter development",
       description: "Music Player App is a flutter app that helps users to manage their music.",
-      color: "bg-gradient-to-br from-green-500 to-teal-600"
+      color: "bg-gradient-to-br from-green-500 to-teal-600",
+      githubUrl: "https://github.com/MalwareVK17/music-player-app" // Add your actual repo URL
     },
     {
       title: "Backend Development",
       category: "Product based Website",
       description: "Backend Development is a node.js app that helps users to manage their backend.",
-      color: "bg-gradient-to-br from-orange-500 to-red-600"
+      color: "bg-gradient-to-br from-orange-500 to-red-600",
+      githubUrl: "https://github.com/MalwareVK17/backend-development" // Add your actual repo URL
     },
     {
       title: "Web Application Dashboard",
       category: "Dashboard Design",
       description: "Complex data visualization dashboard for enterprise analytics platform.",
-      color: "bg-gradient-to-br from-purple-500 to-pink-600"
+      color: "bg-gradient-to-br from-purple-500 to-pink-600",
+      githubUrl: "https://github.com/MalwareVK17/web-dashboard" // Add your actual repo URL
     }
   ];
+
+  const handleProjectClick = (githubUrl: string) => {
+    window.open(githubUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="work" ref={sectionRef} className="py-20 bg-background">
@@ -69,6 +77,7 @@ const Work = () => {
                 isVisible ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
+              onClick={() => handleProjectClick(project.githubUrl)}
             >
               <div className="p-0 overflow-hidden rounded-lg">
                 <div className={`h-64 ${project.color} relative overflow-hidden`}>
@@ -79,7 +88,7 @@ const Work = () => {
                     </span>
                   </div>
                   <div className="absolute top-6 right-6">
-                    <div className="w-12 h-12 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 hover:bg-white/30">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -91,9 +100,22 @@ const Work = () => {
                   <h3 className="font-display text-2xl font-semibold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="font-body text-muted-foreground leading-relaxed">
+                  <p className="font-body text-muted-foreground leading-relaxed mb-4">
                     {project.description}
                   </p>
+                  
+                  {/* View Details Button */}
+                  <div className="flex items-center justify-between">
+                    <span className="font-body text-sm text-muted-foreground">
+                      Click to view repository
+                    </span>
+                    <div className="flex items-center text-accent group-hover:text-primary transition-colors duration-300">
+                      <span className="font-medium text-sm mr-2">View Details</span>
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Card>
