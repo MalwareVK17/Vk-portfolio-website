@@ -102,15 +102,15 @@ const FuturisticContact = () => {
   }, {
     icon: LinkedinLogo,
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/vinay-kumar-mvk/' // Add your actual LinkedIn URL
+    url: 'https://www.linkedin.com/in/vinay-kumar-moturi-a4a554268/' // Add your actual LinkedIn URL
   }, {
     icon: InstagramLogo,
     name: 'Instagram',
-    url: 'https://www.instagram.com/yourusername/' // Add your actual Instagram URL
+    url: 'https://www.instagram.com/vk.volume.2/' // Add your actual Instagram URL
   }, {
     icon: TwitterLogo,
     name: 'Twitter',
-    url: 'https://twitter.com/yourusername' // Add your actual Twitter URL
+    url: 'https://x.com/vinayku37927618?t=orSY3KrZITBELJq-PLpqXw&s=08' // Add your actual Twitter URL
   }];
 
   // Contact info with clickable actions
