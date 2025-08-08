@@ -105,16 +105,13 @@ const Work = () => {
                   
                   {/* View Details Button */}
                   <button 
-                    className="w-full bg-gradient-to-r from-primary to-accent text-white font-medium py-3 px-6 rounded-lg hover:from-accent hover:to-primary transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2 group/button"
+                    className="w-full bg-gradient-to-r from-primary to-accent text-white font-medium py-3 px-6 rounded-lg hover:from-accent hover:to-primary transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleProjectClick(project.githubUrl);
                     }}
                   >
-                    <span>View Details</span>
-                    <svg className="w-5 h-5 transform group-hover/button:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
+                    View Details
                   </button>
                 </div>
               </div>
