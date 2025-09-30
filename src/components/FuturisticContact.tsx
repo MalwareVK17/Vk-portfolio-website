@@ -17,14 +17,12 @@ const FuturisticContact = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Form animation
+      // Form animation (fade in only)
       gsap.fromTo(formRef.current, {
         opacity: 0,
-        x: -100,
         filter: 'blur(10px)'
       }, {
         opacity: 1,
-        x: 0,
         filter: 'blur(0px)',
         duration: 1.2,
         ease: "power2.out",
@@ -35,13 +33,11 @@ const FuturisticContact = () => {
         }
       });
 
-      // Info animation
+      // Info animation (fade in only)
       gsap.fromTo(infoRef.current, {
-        opacity: 0,
-        x: 100
+        opacity: 0
       }, {
         opacity: 1,
-        x: 0,
         duration: 1.2,
         ease: "power2.out",
         scrollTrigger: {
