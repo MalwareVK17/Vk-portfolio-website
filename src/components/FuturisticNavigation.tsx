@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { List, X } from 'phosphor-react';
 
@@ -6,12 +7,13 @@ const FuturisticNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Contact', href: '/contact' }
   ];
 
   useEffect(() => {
@@ -39,11 +41,7 @@ const FuturisticNavigation = () => {
     }
   };
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const closeMenu = () => {
     setIsMenuOpen(false);
     gsap.to(menuRef.current, {
       right: "-100%",
@@ -64,13 +62,17 @@ const FuturisticNavigation = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => (
-                <button
+                <Link
                   key={index}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-light tracking-wide"
+                  to={item.href}
+                  className={`transition-colors duration-300 font-light tracking-wide ${
+                    location.pathname === item.href 
+                      ? 'text-primary' 
+                      : 'text-foreground/80 hover:text-primary'
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
 
@@ -102,13 +104,18 @@ const FuturisticNavigation = () => {
 
           <div className="flex-1 flex flex-col justify-center space-y-8 px-6">
             {navItems.map((item, index) => (
-              <button
+              <Link
                 key={index}
-                onClick={() => scrollToSection(item.href)}
-                className="text-3xl font-light text-foreground/80 hover:text-primary transition-colors duration-300 text-left"
+                to={item.href}
+                onClick={closeMenu}
+                className={`text-3xl font-light transition-colors duration-300 text-left ${
+                  location.pathname === item.href 
+                    ? 'text-primary' 
+                    : 'text-foreground/80 hover:text-primary'
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
