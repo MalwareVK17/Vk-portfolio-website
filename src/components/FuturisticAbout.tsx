@@ -36,17 +36,15 @@ const FuturisticAbout = () => {
         }
       );
 
-      // Image animation
+      // Image animation (fade in only)
       gsap.fromTo(imageRef.current,
         { 
           opacity: 0, 
-          x: -100, 
           rotateY: -15,
           filter: 'blur(10px)' 
         },
         { 
           opacity: 1, 
-          x: 0, 
           rotateY: 0,
           filter: 'blur(0px)',
           duration: 1.5,
