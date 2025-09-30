@@ -11,10 +11,10 @@ const FuturisticHero = () => {
   useEffect(() => {
     const tl = gsap.timeline({ delay: 4 });
 
-    // Animate spline container first (fade in only)
+    // Animate spline container first
     tl.fromTo(splineRef.current,
-      { opacity: 0 },
-      { opacity: 0.8, duration: 1.5, ease: "power2.out" }
+      { opacity: 0, x: 100 },
+      { opacity: 0.8, x: 0, duration: 1.5, ease: "power2.out" }
     );
 
     // Animate headline with blur effect
