@@ -85,6 +85,9 @@
   html {
     overflow-x: hidden;
     width: 100%;
+    /* Hide scrollbar in Firefox/Edge while keeping scroll */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   body {
@@ -93,6 +96,9 @@
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    /* Hide scrollbar in Firefox/Edge while keeping scroll */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
@@ -228,21 +234,13 @@
     right: 0;
   }
 
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
+  /* Hide Scrollbars globally but keep scroll functionality */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
-  ::-webkit-scrollbar-track {
-    background: var(--background);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--gradient-primary);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--gradient-secondary);
-  }
 }
