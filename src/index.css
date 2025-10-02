@@ -209,6 +209,24 @@
     height: 100%;
     z-index: 1;
     opacity: 0.8;
+    pointer-events: none;
+  }
+
+  /* Hide Spline watermark */
+  .spline-container iframe {
+    pointer-events: none;
+  }
+  
+  .spline-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, var(--background));
+    z-index: 2;
+    pointer-events: none;
   }
 
   /* Navigation Styles */
