@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart } from 'phosphor-react';
+import { Linkedin, Github, Instagram, Mail, Phone } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,10 +103,62 @@ const FuturisticFooter = () => {
           </div>
         </div>
 
-        {/* Bottom Line */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <div className="text-sm text-muted-foreground/60 font-light">
-            Designed & Developed with Animation technologies
+        {/* Bottom Section - Social Links & Contact */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Social Media Icons - Left */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 group"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 group"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://www.instagram.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 group"
+                aria-label="Instagram Profile"
+              >
+                <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+            </div>
+
+            {/* Center Text */}
+            <div className="text-sm text-muted-foreground/60 font-light text-center">
+              Designed & Developed with Animation technologies
+            </div>
+
+            {/* Contact Info - Right */}
+            <div className="flex flex-col gap-2 text-right">
+              <a
+                href="tel:+1234567890"
+                className="flex items-center justify-end gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span>+123 456 7890</span>
+              </a>
+              <a
+                href="mailto:your.email@example.com"
+                className="flex items-center justify-end gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span>your.email@example.com</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
