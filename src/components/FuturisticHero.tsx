@@ -9,7 +9,7 @@ const FuturisticHero = () => {
   const splineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 4 });
+    const tl = gsap.timeline({ delay: 0.8 });
 
     // Animate spline container first
     tl.fromTo(splineRef.current,

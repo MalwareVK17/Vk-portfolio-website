@@ -21,7 +21,7 @@ const FuturisticNavigation = () => {
   useEffect(() => {
     gsap.fromTo(navRef.current,
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 3.5, ease: "power2.out" }
+      { y: 0, opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" }
     );
   }, []);
 
