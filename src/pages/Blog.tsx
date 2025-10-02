@@ -27,7 +27,7 @@ const Blog = () => {
     <>
       {isLoading && <Preloader onComplete={handleLoadingComplete} />}
       
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 text-foreground overflow-x-hidden">
         <FuturisticNavigation />
         <FuturisticBlog />
         <FuturisticFooter />

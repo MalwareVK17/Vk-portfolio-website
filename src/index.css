@@ -82,10 +82,17 @@
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   body {
     @apply bg-background text-foreground font-light;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 }
 
