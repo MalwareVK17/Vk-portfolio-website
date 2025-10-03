@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const FuturisticHero = () => {
+  const navigate = useNavigate();
   const heroRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -60,8 +62,8 @@ const FuturisticHero = () => {
     };
   }, []);
 
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  const handleViewWork = () => {
+    navigate('/projects');
   };
 
   return (
@@ -109,7 +111,7 @@ const FuturisticHero = () => {
 
           <button 
             ref={ctaRef}
-            onClick={scrollToProjects}
+            onClick={handleViewWork}
             className="glow-button px-12 py-4 rounded-full text-lg font-medium bg-gradient-to-r from-primary to-accent text-white"
           >
             View My Work
