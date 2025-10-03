@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { List, X } from 'phosphor-react';
 import logo from '@/assets/logo.png';
+import { Button } from '@/components/ui/button';
 
 const FuturisticNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,6 +77,13 @@ const FuturisticNavigation = () => {
                   {item.label}
                 </Link>
               ))}
+              <Button 
+                asChild
+                variant="default"
+                className="ml-4"
+              >
+                <a href="mailto:contact@yourdomain.com">Hire Me</a>
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -119,6 +127,14 @@ const FuturisticNavigation = () => {
                 {item.label}
               </Link>
             ))}
+            <Button 
+              asChild
+              variant="default"
+              size="lg"
+              className="mt-4"
+            >
+              <a href="mailto:contact@yourdomain.com">Hire Me</a>
+            </Button>
           </div>
         </div>
       </div>
