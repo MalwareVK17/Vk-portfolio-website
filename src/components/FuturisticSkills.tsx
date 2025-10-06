@@ -196,27 +196,6 @@ const FuturisticSkills = () => {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          {[
-            { label: 'Projects Completed', value: '50+' },
-            { label: 'Years Experience', value: '5+' },
-            { label: 'Happy Clients', value: '40+' },
-            { label: 'Technologies', value: '30+' }
-          ].map((stat, index) => (
-            <div 
-              key={index}
-              className="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
