@@ -44,22 +44,15 @@ const FuturisticFooter = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Contact', href: '/contact' }
   ];
 
   const handleNavigation = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate(href);
-    }
+    navigate(href);
   };
 
   return (
